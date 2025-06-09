@@ -5,6 +5,7 @@ int main()
 {
     try {
         cout << "selamat di belajar di prodi TI UMY" << endl;
-        throw 0,5; // melemparkan sebuah integer maka 
+        throw 0,5; // melemparkan sebuah integer maka
+        cout << "pernyataan tidak diessekusi" << endl;
     }
 }
