@@ -36,6 +36,10 @@ int main() {
     if (infile.is_open())
     {
         // melakukan penggulangan setiap baris
-        
+        while (getline(infile, baris))
+        {
+            // fan tampilkan disini 
+            cout << baris << '\n';
+        }
     }
 }
