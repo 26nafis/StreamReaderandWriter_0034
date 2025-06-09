@@ -7,4 +7,5 @@ int main() {
     string baris;
 
     // operasi file dalam node 
+    ofstream outfile;
 }
