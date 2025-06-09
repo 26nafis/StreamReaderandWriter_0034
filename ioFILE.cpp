@@ -27,5 +27,5 @@ int main() {
     outfile.close();
 
     // operasi file dalam mode membaca
-    ifstream.infile;
+    ifstream infile;
 }
