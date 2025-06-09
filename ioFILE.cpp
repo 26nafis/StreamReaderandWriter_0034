@@ -41,5 +41,7 @@ int main() {
             // fan tampilkan disini 
             cout << baris << '\n';
         }
+        // tutup file tersebut setelah selesai
+        infile.close();
     }
 }
