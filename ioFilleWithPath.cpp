@@ -1,0 +1,54 @@
+#include <fstream>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string baris;
+    string namaFile;
+
+    cout << " masukan nama file";
+    cin >> namaFile;
+
+    // operasi file dalam node 
+    ofstream outfile;
+    // menunjuk ke sebuah nama file membuka 
+    outfile.open(namaFile + ".txt");
+
+    cout << ">= menulis file, \'q\' untuk keluar" << endl;
+
+    // unlimited loop menulis 
+    while (true) {
+        cout << "- ";
+        // mendapatkan setiap karakter dalam satu  baris 
+        getline(cin, baris);
+        // loop akan berhenti jika anda memasukan karakter q
+        if (baris == "q") break;
+        // menuliskan dan memasukan nilai dari 'baris' ke dalam file
+        outfile << baris << endl;
+    }
+    // selesai dalam menulis sekaran tutup filenya
+    outfile.close();
+
+    // operasi file dalam mode membaca
+    ifstream infile;
+    // menunjuk ke sebuah file untuk membuka 
+    infile.open("contohfile.txt");
+
+    cout << endl << ">= membuka dan membaca file " << endl;
+    //jika file ada maka 
+    if (infile.is_open())
+    {
+        // melakukan penggulangan setiap baris
+        while (getline(infile, baris))
+        {
+            // fan tampilkan disini 
+            cout << baris << '\n';
+        }
+        // tutup file tersebut setelah selesai
+        infile.close();
+    }
+    // jika tidak ditemukan file maka akan menampilkan ini
+    else cout << "Unable to open file";
+    return 0;
+}
